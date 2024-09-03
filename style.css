@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: blanchedalmond;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#battery-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#battery-head {
+  width: 40px;
+  height: 10px;
+  background-color: black;
+  border-radius: 4px 4px 0 0;
+}
+
+#battery {
+  box-sizing: content-box;
+  border: 0.6em solid #000;
+  border-radius: 0.6em;
+  width: 60px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2px;
+}
+
+#charge {
+  background-color: green;
+  transition: height 0.3s ease; /* Animate the height change */
+  width: 100%;  /* The width remains constant */
+  position: absolute;
+  bottom: 0;  /* Anchor the element to the bottom */
+  left: 0;
+  right: 0;
+}
+
+#charge-level {
+  position: relative;
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  left: 2.5em;
+}
+
+
+#icon {
+  position: absolute;
+  font-size: 40px;
+  color: black;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#responsive-toggle {
+  margin-top: 20px;
+  transform: scale(1.5);
+}
+
+@media (max-width: 375px) {
+  #icon {
+      content: '\f10b'; /* Phone icon */
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: black;
+  }
+}
+
+@media (min-width: 376px) {
+  #icon {
+      content: '\f109'; /* Laptop icon */
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: black;
+  }
+}
